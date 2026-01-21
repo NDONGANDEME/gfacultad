@@ -1,8 +1,4 @@
-Aquí tienes un **README.md** bien estructurado para tu proyecto en GitHub, basado en toda la información que compartiste. Lo he organizado con secciones estándar de proyectos académicos y tecnológicos, para que sea claro y atractivo:  
 
----
-
-```markdown
 # 🤣✅ Proyecto de Gestión Académica - AAUCA
 
 ## 🏘️🏡 Universidad Afroamericana de África Central (AAUCA)
@@ -101,7 +97,7 @@ Actualmente se trabaja en el **Módulo de Gestión de Departamento**, que servir
 Este proyecto es de uso **institucional** para la Universidad Afroamericana de África Central (AAUCA).  
 No se contempla distribución comercial externa.
 
-```
+
 
 
 
