@@ -1,0 +1,34 @@
+
+## 🔽 Descargar cambios del remoto y fusionarlos con tus modificaciones locales
+```bash
+
+# 1. Traer los cambios del remoto y reordenar tus commits encima
+git pull --rebase origin main
+
+
+```
+👉 Esto asegura que tu historial quede lineal y que tus cambios se apliquen después de los de tus compañeros.  
+Si hay conflictos, Git te pedirá resolverlos **commit por commit**. Después de resolverlos:
+```bash
+git rebase --continue
+```
+
+---
+
+## 🔼 Subir tus cambios al remoto
+```bash
+# 2. Ver qué archivos cambiaste
+git status
+
+# 3. Añadir todos los cambios
+git add .
+
+# 4. Crear un commit con mensaje claro
+git commit -m "Descripción de los cambios realizados"
+
+# 5. Subir tus cambios al remoto
+git push origin main
+```
+
+---
+
