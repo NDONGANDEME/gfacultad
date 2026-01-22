@@ -22,6 +22,9 @@ class NoticiasController
                 case "paginacion":
                     self::getNoticiasPaginacion($parametros['pagina']);
                     break;
+                case "obtenerCantidadPaginacion":
+                    self::getCantidadPaginacion();
+                    break;
                 default:
     
                     echo json_encode([
@@ -47,5 +50,8 @@ class NoticiasController
     }
     private static function getNoticiasPaginacion($pagina){
         NoticiasDao::obtenerNoticiasAPaginar($pagina);
+    }
+    private static function getCantidadPaginacion(){
+    NoticiasDao::contarNoticias();
     }
 }
