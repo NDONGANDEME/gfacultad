@@ -1,0 +1,16 @@
+# Dependencias y builds
+nomodule/
+node_modules/
+vendor/
+/dist/
+/build/
+
+# Archivos de configuración locales
+.env
+*.log
+*.tmp
+
+# IDE y sistema
+.vscode/
+.idea/
+*.swp
