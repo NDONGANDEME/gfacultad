@@ -1,0 +1,172 @@
+/***************************************************************************/
+/* GLOBAL */
+/***************************************************************************/
+*{
+    padding: 0; margin: 0; font-family: Georgia;
+}
+
+textarea{
+    resize: none;
+}
+
+.divisor{
+    margin-top: -5px;
+}
+
+.division2{
+    background-color: #ffd600;
+    height: 4px;
+    margin: 0 20rem;
+}
+
+body::-webkit-scrollbar{
+    width: 0;
+}
+
+
+
+/***************************************************************************/
+/* PARTE DE LA NAVEGACION */
+/***************************************************************************/
+.navegacion{
+    line-height: 1;
+}
+
+.barraNavegacion{
+    padding: 0.7rem 8rem;
+    background-color: #e9ab00;
+}
+
+.logoParte1{
+    color: #000;
+    font-size: 0.7rem;
+}
+
+.logoParte2{
+    color: #ffdd00;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.opcionesBarraNavegacion{
+    list-style: none;
+}
+
+.enlacesBarraNavegacion{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+
+.listaBaraNavegacion{
+    position: relative;
+    padding: 0.1rem 1rem;
+    font-size: 1.1rem;
+}
+
+/*estilo para la aparicion de las lineas debajo de las opciones*/
+/*linea oculta al inicio*/
+.enlacesBarraNavegacion::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%; /*Empieza desde el centro*/
+    width: 0;
+    height: 2px;
+    background-color: #ffd600;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/*al pasar el cursor, se extiende la linea*/
+.enlacesBarraNavegacion:hover::after{
+    width: 100%;
+}
+
+
+
+/***************************************************************************/
+/* PARTE DEL HERO */
+/***************************************************************************/
+.hero2{
+    flex-direction: column;
+}
+
+
+
+/***************************************************************************/
+/* PARTE DEL FOOTER */
+/***************************************************************************/
+footer {
+    background-color: #4a3905;
+    color: #f1f1f1;
+    padding: 40px 40px 5px 40px;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    font-size: 0.9rem;
+}
+
+.footerLink {
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footerLink:hover {
+    color: #fff;
+}
+
+.division{
+    background-color: #ffd600;
+    height: 4px;
+    margin: 3rem 30rem;
+}
+
+.imgEscudo{
+    width: 200px; height: 200px;
+}
+
+
+
+/***************************************************************************/
+/* PARTE DEL SOBRE NOSOTROS */
+/***************************************************************************/
+.imgSobreNos{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 3rem 0;
+    background-color: #ffd600;
+    height: 2px;
+}
+
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+
+@media (min-width: 40em) {
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}

@@ -1,0 +1,157 @@
+/***************************************************************************/
+/* PARTE DE LAS TARJETAS DE NOTICIAS */
+/***************************************************************************/
+.imgNoticias{
+    width: 100%;
+    height: 200px;
+}
+
+.tarjeta{
+    transition: all 0.5s ease;
+}
+.tarjeta:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 1px 1px 1px #605000;
+}
+
+
+
+/***************************************************************************/
+/* PARTE DEL MODAL - CON ANIMACIONES COMPLETAS */
+/***************************************************************************/
+/* Asegurarse que el contenido del modal es visible */
+#tituloNoticiaDetalle,
+#contenidoNoticiadetalle {
+    color: #000 !important;
+}
+
+/* Fondo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal[style*="display: block"] {
+    display: block !important;
+}
+
+.modal-encabezado{
+    flex-direction: column;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    animation: aparecerContenido 0.3s ease-out;
+}
+
+/* Clase para animación de salida */
+.modal.cerrando {
+    animation: desaparecerFondo 0.3s ease-out forwards;
+}
+
+/* Botón de cerrar */
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.cerrar:hover {
+    color: #000;
+}
+
+
+
+/* Animaciones de entrada */
+@keyframes aparecerFondo {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes aparecerContenido {
+    from { 
+        transform: translateY(-50px); 
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+/* Animaciones de salida */
+@keyframes desaparecerFondo {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes desaparecerContenido {
+    from { 
+        transform: translateY(0); 
+        opacity: 1;
+    }
+    to { 
+        transform: translateY(-50px); 
+        opacity: 0;
+    }
+}
+
+
+
+/***************************************************************************/
+/* PARTE DE LA PAGINACIÓN */
+/***************************************************************************/
+/* Estilos para la paginación */
+.paginacion-container {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.page-item.active .page-link {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.page-link {
+    color: #ffc107;
+    border: 1px solid #dee2e6;
+}
+
+.page-link:hover {
+    color: #212529;
+    background-color: #ffeaa7;
+    border-color: #ffc107;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+/* Para asegurar que las tarjetas tengan la misma altura */
+.contTarjetaNoticia .row .col-md-4 {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.contTarjetaNoticia .card {
+    flex: 1;
+}
