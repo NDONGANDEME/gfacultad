@@ -1,0 +1,352 @@
+/***************************************************************************/
+/* GLOBAL */
+/***************************************************************************/
+*{
+    padding: 0; margin: 0; font-family: Georgia;
+}
+
+textarea{
+    resize: none;
+}
+
+.divisor{
+    margin-top: -5px;
+}
+
+
+
+/***************************************************************************/
+/* PARTE DE LA NAVEGACION */
+/***************************************************************************/
+.barraNavegacionInicio{
+    padding: 0.5rem 0;   /*padding: 0.7rem 8rem;*/
+    background-color: #ffd600;
+    color: black;
+}
+
+.logoParte1Inicio{
+    color: black;
+    font-size: 0.7rem;
+}
+
+
+
+/***************************************************************************/
+/* PARTE DEL HEADER - RESPONSIVE */
+/***************************************************************************/
+.headerInicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("../../img/IMG-20251114-WA0022-copia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* Cambiado de scroll para mejor efecto */
+    min-height: 90vh; /* Cambiado de height a min-height */
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px; /* Compensa la navbar fija */
+    padding: 2rem 1rem; /* Padding para dispositivos móviles */
+}
+
+/* Corrección para la navbar fija */
+.navbar {
+    z-index: 1030;
+}
+
+.headerInicio .hero {
+    z-index: 1;
+    position: relative;
+}
+
+.hero{
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Tamaño base para desktop */
+}
+
+#btnBodyHeader{
+    padding: 0.5rem 5rem;
+    font-size: 18px;
+}
+
+
+
+/***************************************************************************/
+/* PARTE DE NOTICIAS - CARRUSEL RESPONSIVE */
+/***************************************************************************/
+.contenedorNoticias{
+    margin: 2.5rem 1rem; /* Reducido para móviles */
+    padding: 1rem;
+}
+
+/* Títulos responsivos */
+.tituloSeccion{
+    text-align: center;
+    font-size: 1.8rem; /* Tamaño base */
+}
+
+.divisorTituloSeccion{
+    background-color: #ffd600;
+    height: 3px;
+    margin: 1rem auto 0 auto; /* Centrado */
+    width: 80%; /* Porcentaje en lugar de fijo */
+    max-width: 300px; /* Máximo para desktop */
+}
+
+.parrafoTituloSeccion{
+    margin: 1rem 0 0.5rem 0;
+    text-align: center;
+    padding: 0 1rem; /* Padding lateral en móviles */
+}
+
+/* CARRUSEL PRINCIPAL */
+#carruselNoticias{
+    margin: 1.5rem auto 0 auto;
+    max-height: none; /* Quitamos altura máxima fija */
+    background-color: #000;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Contenedor de las imágenes */
+#carruselNoticias .carousel-item {
+    position: relative;
+    height: 300px; /* Altura para móviles */
+    overflow: hidden;
+}
+
+/* Imágenes del carrusel - RESPONSIVE */
+#carruselNoticias .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene proporción cubriendo el área */
+    object-position: center;
+}
+
+/* Texto del carrusel - RESPONSIVE */
+.carousel-caption {
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    text-align: center;
+}
+
+.carousel-caption h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.carousel-caption p {
+    font-size: 0.9rem;
+    color: #eee;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Controles del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 214, 0, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 60% 60%;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    margin-bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.carousel-indicators button.active {
+    background-color: #ffd600;
+}
+
+
+
+/* MEDIA QUERIES PARA DIFERENTES DISPOSITIVOS */
+@media (max-width: 576px) {
+    .headerInicio {
+        min-height: 60vh;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Tablet (768px y menor) */
+@media (max-width: 768px) {
+    .headerInicio {
+        min-height: 70vh;
+        background-attachment: scroll; /* En móviles mejor sin fixed */
+        margin-top: 60px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero p {
+        width: 100% !important;
+        font-size: 0.9rem;
+    }
+    
+    #btnBodyHeader {
+        padding: 0.5rem 2rem !important;
+        font-size: 16px;
+    }
+
+    .contenedorNoticias {
+        margin: 2rem 0.5rem;
+    }
+    
+    .tituloSeccion {
+        font-size: 1.6rem;
+    }
+    
+    .divisorTituloSeccion {
+        height: 2px;
+        width: 70%;
+    }
+    
+    #carruselNoticias .carousel-item {
+        height: 280px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Móvil (412px y menor) - TU DISPOSITIVO */
+@media (max-width: 412px) {
+    .hero h1 {
+        font-size: 1.5rem !important; /* Aquí para móvil 412px */
+    }
+
+    .contenedorNoticias {
+        margin: 1.5rem 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .tituloSeccion {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .divisorTituloSeccion {
+        height: 2px;
+        width: 60%;
+        max-width: 200px;
+        margin: 0.5rem auto 0 auto;
+    }
+    
+    .parrafoTituloSeccion {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+        margin: 0.5rem 0;
+    }
+    
+    #carruselNoticias {
+        margin-top: 1rem;
+        border-radius: 8px;
+    }
+    
+    #carruselNoticias .carousel-item {
+        height: 250px; /* Altura óptima para 412px */
+    }
+    
+    .carousel-caption {
+        bottom: 10px;
+        padding: 10px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.1rem;
+        margin-bottom: 3px;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.8rem;
+        -webkit-line-clamp: 2; /* Mantiene 2 líneas máximo */
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Móviles muy pequeños (menor a 360px) */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 1.3rem !important; /* Para móviles muy pequeños */
+    }
+
+    #carruselNoticias .carousel-item {
+        height: 220px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Desktop (mayor a 768px) */
+@media (min-width: 769px) {
+    #carruselNoticias .carousel-item {
+        height: 480px; /* Más altura en desktop */
+    }
+    
+    .carousel-caption {
+        bottom: 40px;
+        padding: 20px 40px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}

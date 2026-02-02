@@ -1,0 +1,18 @@
+/* PARA LAS TABLAS */
+.contBotonesCrud{
+    width: 40%;
+}
+
+#tbodyTablaEstudiante tr {
+    height: 20px;
+}
+
+
+/* PARA EL MODAL DE ESTUDIANTES */
+#modalNuevoEstudiante::-webkit-scrollbar, .modal-body::-webkit-scrollbar{
+    width: 0;
+}
+
+.camposFormEstudiante{
+    grid-template-columns: repeat(2, 1fr);
+}

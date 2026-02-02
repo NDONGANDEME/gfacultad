@@ -96,8 +96,3 @@ Actualmente se trabaja en el **Módulo de Gestión de Departamento**, que servir
 ## 📜 Licencia
 Este proyecto es de uso **institucional** para la Universidad Afroamericana de África Central (AAUCA).  
 No se contempla distribución comercial externa.
-
-
-
-
-
