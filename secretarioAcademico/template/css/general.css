@@ -1,0 +1,209 @@
+/***************************************************************************/
+/* GLOBAL */
+/***************************************************************************/
+*{
+  padding: 0; margin: 0; font-family: Georgia;
+}
+
+.imgCarnet{
+  height: 15%;
+  width: 15%;
+}
+
+
+/***************************************************************************/
+/* MANEJO DE ERRORES */
+/***************************************************************************/
+.errorMensaje{
+  font-size: 12px;
+  margin-top: 5px;
+  color: red;
+}
+
+
+/***************************************************************************/
+/* MANEJO DE TABLAS */
+/***************************************************************************/
+.tbodyTabla tr {
+  height: 20px;
+}
+
+
+/***************************************************************************/
+/* MANEJO DE MODAL */
+/***************************************************************************/
+#modalNuevoEstudiante::-webkit-scrollbar, .modal-body::-webkit-scrollbar{
+  width: 0;
+}
+
+.camposForm{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.seccion {
+  display: none;
+}
+
+.seccion.active {
+  display: block;
+}
+
+.seccion {
+  display: none;
+  position: absolute;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.seccion.active {
+  display: block;
+  position: relative;
+}
+
+.seccion.izquierda {
+  transform: translateX(-100%);
+}
+
+.seccion.derecha {
+  transform: translateX(100%);
+}
+
+.seccion.anim-in {
+  animation: slideIn 0.5s forwards;
+}
+
+.seccion.anim-out {
+  animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes slideInRev {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideOutRev {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+.modal-body{
+  overflow: hidden;
+}
+
+/***************************************************************************/
+/* MANEJO DEL MODAL DE DETALLES */
+/***************************************************************************/
+.camposFormDatos{
+  grid-template-columns: repeat(1, 1fr);
+}
+
+
+/***************************************************************************/
+/* PARA LA PARTE DE LA SUBIDA DE ARCHIVO (MOD. FORMACION) */
+/***************************************************************************/
+.file-preview-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+.file-preview-item .file-name {
+  font-weight: 500;
+}
+.file-preview-item .file-size {
+  font-size: 12px;
+  color: #6c757d;
+}
+.file-icon {
+  width: 24px;
+  text-align: center;
+  margin-right: 8px;
+}
+.preview-container {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+.file-input-wrapper {
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.file-input-wrapper:hover {
+  background-color: #f0f8ff;
+  border-color: #0056b3;
+}
+.file-input-wrapper i {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+#fileInput {
+  display: none;
+}
+
+
+/****************************************************************************************/
+/* PARTE PARA CONTROLAR EL CURSOR EN FUNCION DEL ELEMENTO EN QUE SE POSICIONA */
+/****************************************************************************************/
+/* Todo pointer por defecto */
+* {
+  cursor: auto;
+}
+
+/* Excepciones para áreas de texto */
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+textarea,
+[contenteditable="true"],
+pre,
+code {
+  cursor: text;
+}
+
+/* Contenido normal (párrafos, títulos, etc) */
+body, main, article, section, p, h1, h2, h3, h4, h5, h6 {
+  cursor: auto;
+}
+
+/* Deshabilitados */
+:disabled {
+  cursor: not-allowed;
+}
+
+/* Mantener selección de texto habilitada */
+::selection {
+  background: rgba(255, 214, 0, 0.3);
+}
+
+/* Evitar selección en elementos interactivos */
+button, a, .btn, .nav-link, [role="button"] {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Permitir selección en contenido */
+p, div, span, li, td {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}

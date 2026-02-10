@@ -57,11 +57,11 @@ export class u_utiles
     static colorearCampo(parametroBooleano, campo)
     {
         if(parametroBooleano==false){
-            campo.classList.remove('border-success');
-            campo.classList.add('border', 'border-2', 'border-danger');
+            campo.removeClass('border-success');
+            campo.addClass('border', 'border-2', 'border-danger');
         }else{
-            campo.classList.remove('border-danger');
-            campo.classList.add('border', 'border-2', 'border-success');
+            campo.removeClass('border-danger');
+            campo.addClass('border', 'border-2', 'border-success');
         }
     }
 
@@ -99,5 +99,31 @@ export class u_utiles
                 window.location.href = rutaRedireccion;
             });
         }
+    }
+
+
+
+    // Función para mostrar error en un campo específico
+    static mostrarError(idCampo, mensaje, esError = true) 
+    {
+        const errorLabel = document.querySelector(`#${idCampo}`);
+        if (errorLabel) 
+        {
+            errorLabel.textContent = mensaje;
+            errorLabel.style.display = esError ? 'block' : 'none';
+        }
+    }
+
+
+    // metodo para generar Ids de forma dinamica
+    static obtenerSiguienteId(tipo = 'default') {
+        // Inicializar contador si no existe
+        if (!contadores[tipo]) {
+            contadores[tipo] = 0;
+        }
+        
+        // Incrementar y devolver
+        contadores[tipo]++;
+        return contadores[tipo];
     }
 }

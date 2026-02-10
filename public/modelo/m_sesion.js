@@ -47,12 +47,11 @@ export class m_sesion
                 });
             }
             
-            u_alertas.cargarSimple(3000, 'Redirigiendo, espere por favor...', '/guniversidadfrontend/index.html');
+            localStorage.clear();
+            u_alertas.cargarSimple(3000, 'Cerrando sesión. Redirigiendo, espere por favor...', '/guniversidadfrontend/index.html');
         } catch (error) {
-            console.error('Error al cerrar sesión:', error);
-            Alerta.error('Error', `Error al cerrar sesión: ${error}`);
             sessionStorage.removeItem('usuarioActivo');
-            u_utiles.redirigirA(null, '/guniversidadfrontend/public/template/html/iniciarSesion.html');
+            u_alertas.cargarSimple(3000, 'Error al cerrar sesión. Redirigiendo, espere por favor...', '/guniversidadfrontend/index.html');
         }
     }
 
@@ -111,7 +110,7 @@ export class m_sesion
                     m_sesion.guardarSesion('usuarioActivo', nuevaS);
                     //let rol = usuarioVerificado.rol;
 
-                    switch('Secretario'){
+                    switch('Secretario Académico'){
                         case 'Administrador': 
                             u_alertas.cargarSimple(3000, 'Credenciales correctas. Procesando...', '/guniversidadfrontend/admin/index.html');
                             break;
@@ -121,8 +120,8 @@ export class m_sesion
                         case 'Estudiante': 
                             u_alertas.cargarSimple(3000, 'Credenciales correctas. Procesando...', '#');
                             break;
-                        case 'Secretario':
-                            u_alertas.cargarSimple(3000, 'Credenciales correctas. Procesando...', '/guniversidadfrontend/secretario/index.html');
+                        case 'Secretario Académico':
+                            u_alertas.cargarSimple(3000, 'Credenciales correctas. Procesando...', '/guniversidadfrontend/secretarioAcademico/index.html');
                             break;
                     }
 
